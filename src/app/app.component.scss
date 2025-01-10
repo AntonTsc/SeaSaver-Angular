@@ -1,0 +1,19 @@
+footer{
+    background-color: #037df6;
+    color: black;
+    height: auto; 
+}
+
+div{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;  
+}
+ 
+svg{
+    width: 25px;
+    height: 25px;
+    color: black;
+    margin-left: 10px;
+}

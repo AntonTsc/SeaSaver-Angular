@@ -8,6 +8,8 @@ import { TiendaComponent } from './tienda/tienda.component';
 import { CamisetasComponent } from './camisetas/camisetas.component';
 import { SudaderasComponent } from './sudaderas/sudaderas.component';
 import { OtrosComponent } from './otros/otros.component';
+import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados.component';
+import { RescatadosComponent } from './rescatados/rescatados.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { OtrosComponent } from './otros/otros.component';
     TiendaComponent,
     CamisetasComponent,
     SudaderasComponent,
-    OtrosComponent
+    OtrosComponent,
+    BuscarRescatadosComponent,
+    RescatadosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent, TiendaComponent, CamisetasComponent, SudaderasComponent, OtrosComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

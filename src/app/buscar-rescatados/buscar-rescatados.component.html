@@ -1,0 +1,16 @@
+<label>nombre </label>
+<input type="text" id="nombre" ngmodel="nombre">
+<label>sexo </label>
+<input type="checkbox" ngModel="sexo" value="">default
+<input type="checkbox" ngModel="sexo" value="hombre">hombre
+<input type="checkbox" ngModel="sexo" value="mujer">mujer
+<label>edad </label>
+<input type="number" name="edad" min="10" max="100" ngModel="edad" ><br>
+<div *ngFor="let persona of rescatados" class="card" style="width: 18rem;">
+    <img src="../../assets/img/{{persona.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{persona.nombre}}</h5>
+        <p class="card-text">{{persona.precio}}</p>
+        <a href="#" class="btn btn-primary">comprar</a>
+    </div>
+</div>

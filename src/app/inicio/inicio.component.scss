@@ -1,0 +1,176 @@
+@import "./../../colores";
+
+.banner{
+    width: 100%;
+    position: relative;
+    height: fit-content;
+}
+
+.lema{
+    position: absolute;
+    top: -5px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.599);
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 20px;
+    color: white;
+    gap: 40px;
+
+    & h1{
+        text-align: center;
+        font-size: 35px;
+    }
+}
+
+.videoBanner{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.seccion{
+    padding-inline: 50px;
+    display: flex;
+    width: 100%;
+    padding-block: 80px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+section{
+    width: 100%;
+    background-color: $grisClaro;
+}
+
+.tituloInicio{
+    color: $azulClaro;
+    font-size: 30px;
+}
+
+.seccionFoto{
+    height: 300px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.textoDescriptivo{
+    font-size: 20px;
+}
+
+.linkInicio{
+    all: unset;
+    background-color: $azulClaro;
+    color: white;
+    padding: 7px 25px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease .3s;
+
+    &:hover{
+        background-color: $azulOscuro;
+    }
+}
+
+.dudas{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 50px;
+    gap: 40px;
+    padding-inline: 10px;
+
+    & p{
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (width < 1000px){
+
+    .seccion{
+        padding-inline: 30px;
+        gap: 50px;
+    }
+
+    .textoDescriptivo{
+        font-size: 17px;
+    }
+
+    .seccionFoto{
+        height: 220px;
+    }
+}
+
+@media (width < 800px){
+
+    .lema h3, .lema p{
+        display: none;
+    }
+
+    .seccion{
+        padding-inline: 20px;
+    }
+
+    .textoDescriptivo{
+        font-size: 16px;
+    }
+}
+
+@media (width < 700px){
+
+    .lema{
+        padding: 10px;
+        left: 20px;
+        width: 300px;
+        & h1{
+            font-size: 25px;
+        }
+    }
+
+    .seccion{
+        padding-inline: 10px;
+        flex-direction: column;
+        padding-block: 40px;
+    }
+
+    .textoDescriptivo{
+        font-size: 15px;
+    }
+
+    .seccionFoto{
+        order: 3;
+    }
+}
+
+@media (width < 600px){
+
+    .lema{
+        width: 250px;
+        & h1{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (width < 500px){
+
+    .lema{
+        width: 200px;
+        & h1{
+            font-size: 18px;
+        }
+    }
+}
+

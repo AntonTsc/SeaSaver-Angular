@@ -1,0 +1,148 @@
+@import "./../../colores";
+
+a{
+    all: unset;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: $azulOscuro;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999999999999;
+
+    & img{
+        height: 100%;
+    }
+
+    & div{
+        height: 100%;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    & ul{
+        position: absolute;
+        top: 0;
+        padding-top: 80px;
+        right: -100%;
+        background-color: $azulOscuro;
+        width: 30%;
+        list-style: none;
+        height: 100dvh;
+        transition: ease .5s;
+        z-index: -1;
+        overflow: hidden;
+
+        & li{
+            width: 100%;
+            padding: 10px 10px;
+            cursor: pointer;
+            transition: ease .2s;
+            position: relative;
+
+            &::before{
+                content: "";
+                width: 0%;
+                height: 100%;
+                background-color: #cbcbcb51;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: ease .3s;
+                z-index: -1;
+            }
+
+            &:hover{
+                
+                &::before{
+                    width: 100%;
+                }
+            }
+
+            & a{
+                font-size: 25px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.linkImportante{
+    all: unset;
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: $rojo;
+    transition: ease .2s;
+
+    &:hover{
+        background-color: $rojoOscuro;
+    }
+}
+
+.menuLinkImportante{
+    display: none;
+}
+
+.clickIcono{
+    font-size: 36px;
+    cursor: pointer;
+}
+
+#abrirMenu{
+    right: 0;
+}
+
+@media (width < 900px){
+    nav > ul{
+        width: 50%;
+    }
+}
+
+@media (width < 600px){
+
+    nav{
+        padding: 5px 10px;
+    }
+
+    nav > img{
+        height: 80%;
+    }
+
+    nav > ul{
+        width: 100%;
+        height: fit-content;
+
+        & li > a{
+            font-size: 22px;
+        }
+    }
+}
+
+@media (width < 500px){
+
+    .linkImportante{
+        display: none;
+    }
+
+    nav > ul{
+
+        & li > a{
+            font-size: 20px;
+        }
+    }
+
+    .menuLinkImportante{
+        display: block;
+    }
+
+}

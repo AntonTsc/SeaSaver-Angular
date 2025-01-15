@@ -1,0 +1,46 @@
+[  
+   {
+      "camisetas":[
+         {
+         "id":"1",
+         "precio":1.50,
+         "nombre":"camiseta SS",
+         "img": "SeaSaverIcon.png" 
+         },
+         {
+            "id":"2",
+            "precio":1.60,
+            "nombre":"camiseta SeaSsaver",
+            "img": "SeaSaverIcon.png" 
+         }
+      ],
+      "sudaderas":[
+         {
+            "id":"3",
+            "precio":2.50,
+            "nombre":"sudareras SS",
+            "img": "SeaSaverLogoBlack.png" 
+         },
+         {
+            "id":"4",
+            "precio":2.60,
+            "nombre":"sudareras SeaSaiver",
+            "img": "SeaSaverLogoBlack.png"    
+         }
+      ],
+      "otros":[
+          {
+            "id":"5",
+            "precio":3.50,
+            "nombre":"boligrafo SS",
+            "img": "SeaSaverLogoBlue.png" 
+         },
+         {
+            "id":"6",
+            "precio":3.60,
+            "nombre":"gafas SS",
+            "img": "SeaSaverLogoBlue.png" 
+         } 
+      ]     
+   }
+ ]

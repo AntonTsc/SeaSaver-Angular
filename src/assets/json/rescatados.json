@@ -1,0 +1,38 @@
+[  
+   {
+    "id":1,
+    "nombre": "Maxrai",
+    "sexo":"H",
+    "edad":"30"
+   },
+   {
+    "id":2,
+    "nombre": "Xion",
+    "sexo":"F",
+    "edad":"40"
+   },
+   {
+    "id":3,
+    "nombre": "mario",
+    "sexo":"H",
+    "edad":"35"
+   },
+   {
+    "id":4,
+    "nombre": "ludwig",
+    "sexo":"F",
+    "edad":"45"
+   },
+   {
+    "id":5,
+    "nombre": "luigi",
+    "sexo":"H",
+    "edad":"40"
+   },
+   {
+    "id":6,
+    "nombre": "v",
+    "sexo":"F",
+    "edad":"50"
+   }
+ ]

@@ -1,0 +1,10 @@
+<div *ngFor="let categoria of tienda" class="card" style="width: 18rem;">
+    <div *ngFor="let producto of categoria.camisetas">
+        <img src="../../assets/img/{{producto.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre}}</h5>
+            <p class="card-text">{{producto.precio}}</p>
+            <a href="#" class="btn btn-primary">comprar</a>
+        </div>
+    </div>
+</div>

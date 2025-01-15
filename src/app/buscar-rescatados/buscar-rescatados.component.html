@@ -1,16 +1,19 @@
-<label>nombre </label>
-<input type="text" id="nombre" ngmodel="nombre">
-<label>sexo </label>
-<input type="checkbox" ngModel="sexo" value="">default
-<input type="checkbox" ngModel="sexo" value="hombre">hombre
-<input type="checkbox" ngModel="sexo" value="mujer">mujer
+form<label>nombre </label>
+<input type="text" id="nombre" #nombreInput (input)="filtrarNombre(nombreInput.value)">
 <label>edad </label>
-<input type="number" name="edad" min="10" max="100" ngModel="edad" ><br>
-<div *ngFor="let persona of rescatados" class="card" style="width: 18rem;">
-    <img src="../../assets/img/{{persona.img}}" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{persona.nombre}}</h5>
-        <p class="card-text">{{persona.precio}}</p>
-        <a href="#" class="btn btn-primary">comprar</a>
+<input type="number" name="edad" min="10" max="100" #edadInput (input)="filtraredad(edadInput.value)" >
+<label>sexo </label>
+<select id="cars" name="cars" #sexoInput (input)="filtrarsexo(sexoInput.value)">
+    <option value="todos">todos</option>
+    <option value="H">hombre</option>
+    <option value="F">mujer</option>
+  </select>
+<div class="rescatadosGrid">
+    <div *ngFor="let persona of rescatadosFiltrados" class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{persona.nombre}}</h5>
+            <p class="card-text">{{persona.precio}}</p>
+        </div>
     </div>
 </div>
+<h1 *ngIf="rescatadosFiltrados.length == 0">No hay rescatados</h1>

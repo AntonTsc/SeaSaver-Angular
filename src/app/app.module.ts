@@ -11,6 +11,7 @@ import { CamisetasComponent } from './camisetas/camisetas.component';
 import { SudaderasComponent } from './sudaderas/sudaderas.component';
 import { OtrosComponent } from './otros/otros.component';
 import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados
     CamisetasComponent,
     SudaderasComponent,
     OtrosComponent,
-    BuscarRescatadosComponent
+    BuscarRescatadosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

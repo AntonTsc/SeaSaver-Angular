@@ -3,14 +3,16 @@
     <div>
         <a class="linkImportante"><i class="ri-shopping-bag-fill"></i> Tienda</a>
         <a class="linkImportante"><i class="ri-service-fill"></i> Donar</a>
+        <!--Estos dos iconos aparecen o se renderizan dependiendo del booleano "abierto"-->
         <i (click)="abrirMenu()" *ngIf="!abierto" class="ri-menu-2-line clickIcono"></i>
         <i (click)="cerrarMenu()" *ngIf="abierto" class="ri-close-line clickIcono"></i>
     </div>
-    <ul [id]="abierto ? 'abrirMenu' : ''">
-        <li class="menuLinkImportante"><a><i class="ri-service-fill"></i> Donar</a></li>
-        <li class="menuLinkImportante"><a><i class="ri-shopping-bag-fill"></i> Tienda</a></li>
-        <li><a><i class="ri-search-line"></i> Buscar rescatados</a></li>
-        <li><a><i class="ri-information-2-line"></i> Sobre nosotros</a></li>
-        <li><a><i class="ri-user-line"></i> Iniciar sesión</a></li>
-    </ul>
 </nav>
+<!--El id del menu desplazable depende del booleano "abierto"-->
+<ul [id]="abierto ? 'abrirMenu' : ''" class="menuDesplegable">
+    <li class="menuLinkImportante"><a><i class="ri-service-fill"></i> Donar</a></li>
+    <li class="menuLinkImportante"><a><i class="ri-shopping-bag-fill"></i> Tienda</a></li>
+    <li><a><i class="ri-search-line"></i> Buscar rescatados</a></li>
+    <li><a><i class="ri-information-2-line"></i> Sobre nosotros</a></li>
+    <li><a><i class="ri-user-line"></i> Iniciar sesión</a></li>
+</ul>

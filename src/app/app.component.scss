@@ -1,6 +1,16 @@
 footer{
     color: black;
     height: auto; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mainApp{
+    margin: 0;
+    margin-bottom: 200px;
+    margin-top: 80px;
 }
 
 footer div{
@@ -73,9 +83,14 @@ footer div svg{
   }
 
 @media (width < 500px){
-    footer div{
-        flex-direction: column;
-        height: fit-content;
-        gap: 10px;
-    }
+
+  .mainApp{
+    margin-bottom: 280px;
+  }
+
+  footer div{
+    flex-direction: column;
+    height: fit-content;
+    gap: 10px;
+  }
 }

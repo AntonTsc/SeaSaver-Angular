@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import rescates from 'src/assets/json/rescates.json'
 
 @Component({
   selector: 'app-inicio',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent {
-
+  rescates:any=rescates
 }

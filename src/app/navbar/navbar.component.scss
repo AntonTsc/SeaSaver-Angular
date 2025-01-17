@@ -23,15 +23,20 @@ nav{
     left: 0;
     z-index: 999999999999;
 
-    & img{
-        height: 100%;
-    }
-
     & div{
         height: 100%;
         display: flex;
         gap: 15px;
         align-items: center;
+    }
+}
+
+.logo{
+    height: 100%;
+
+    & img{
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -120,7 +125,7 @@ nav{
         padding: 5px 10px;
     }
 
-    nav > img{
+    .logo{
         height: 80%;
     }
 

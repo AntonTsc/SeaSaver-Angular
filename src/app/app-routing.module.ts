@@ -16,7 +16,8 @@ const routes: Routes = [
     {path: "sudaderas",component: SudaderasComponent},
     {path: "otros",component: OtrosComponent}
   ]},
- {path: "buscar", component: BuscarRescatadosComponent} 
+ {path: "buscar", component: BuscarRescatadosComponent},
+ {path: "**", pathMatch: "full", redirectTo: ""} 
 ];
 
 @NgModule({

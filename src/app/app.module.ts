@@ -12,6 +12,7 @@ import { SudaderasComponent } from './sudaderas/sudaderas.component';
 import { OtrosComponent } from './otros/otros.component';
 import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados.component';
 import { LoginComponent } from './login/login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

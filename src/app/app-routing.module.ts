@@ -19,6 +19,7 @@ const routes: Routes = [
   ]},
  {path: "buscar", component: BuscarRescatadosComponent},
  {path: "signin", component: LoginComponent} 
+ {path: "**", pathMatch: "full", redirectTo: ""} 
 ];
 
 @NgModule({

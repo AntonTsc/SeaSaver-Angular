@@ -1,13 +1,15 @@
-form<label>nombre </label>
-<input type="text" id="nombre" #nombreInput (input)="filtrarNombre(nombreInput.value)">
-<label>edad </label>
-<input type="number" name="edad" min="10" max="100" #edadInput (input)="filtraredad(edadInput.value)" >
-<label>sexo </label>
-<select id="cars" name="cars" #sexoInput (input)="filtrarsexo(sexoInput.value)">
-    <option value="todos">todos</option>
-    <option value="H">hombre</option>
-    <option value="F">mujer</option>
-  </select>
+<div class="filtros">
+    <label>nombre </label>
+    <input type="text" id="nombre" #nombreInput (input)="filtrarNombre(nombreInput.value)">
+    <label>edad </label>
+    <input type="number" name="edad" min="10" max="100" #edadInput (input)="filtraredad(edadInput.value)" >
+    <label>sexo </label>
+    <select id="cars" name="cars" #sexoInput (input)="filtrarsexo(sexoInput.value)">
+        <option value="todos">todos</option>
+        <option value="H">hombre</option>
+        <option value="F">mujer</option>
+    </select>   
+</div>
 <div class="rescatadosGrid">
     <div *ngFor="let persona of rescatadosFiltrados" class="card" style="width: 18rem;">
         <div class="card-body">

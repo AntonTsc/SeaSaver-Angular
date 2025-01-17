@@ -6,7 +6,9 @@ import { CamisetasComponent } from './camisetas/camisetas.component';
 import { SudaderasComponent } from './sudaderas/sudaderas.component';
 import { OtrosComponent } from './otros/otros.component';
 import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -18,6 +20,7 @@ const routes: Routes = [
     {path: "otros",component: OtrosComponent}
   ]},
  {path: "buscar", component: BuscarRescatadosComponent},
+ {path: "nosotros", component: NosotrosComponent},
  {path: "signin", component: LoginComponent}, 
  {path: "**", pathMatch: "full", redirectTo: ""} 
 ];

@@ -12,6 +12,7 @@ import { SudaderasComponent } from './sudaderas/sudaderas.component';
 import { OtrosComponent } from './otros/otros.component';
 import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CamisetasComponent,
     SudaderasComponent,
     OtrosComponent,
-    BuscarRescatadosComponent
+    BuscarRescatadosComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@ const routes: Routes = [
     {path: "otros",component: OtrosComponent}
   ]},
  {path: "buscar", component: BuscarRescatadosComponent},
- {path: "signin", component: LoginComponent} 
+ {path: "signin", component: LoginComponent}, 
  {path: "**", pathMatch: "full", redirectTo: ""} 
 ];
 

@@ -1,0 +1,145 @@
+@import "./../../colores";
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100dvh - 80px);
+  width: 100%;
+  background-image: url("./../../assets/img/loginFoto.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+form{
+    background-color: $grisClaro;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginTitulo{
+    text-align: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    margin-bottom: 10px;
+
+    & label{
+        color: $grisOscuro;
+    }
+
+    & input{
+        all: unset;
+        background-color: white;
+        padding: 5px;
+        border: 1px solid;
+    }
+}
+
+button[type="submit"]{
+    all: unset;
+    cursor: pointer;
+    background-color: $azulClaro;
+    padding: 5px 10px;
+    color: white;
+    margin-top: 20px;
+    width: fit-content;
+    transition: ease .3s;
+
+    &:hover{
+        background-color: $azulOscuro;
+    }
+}
+
+.seccion{
+    padding-inline: 50px;
+    display: flex;
+    width: 100%;
+    padding-block: 80px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+.textoDescriptivo{
+    font-size: 20px;
+}
+
+.seccionFoto{
+    height: 300px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.linkInicio{
+    all: unset;
+    background-color: $azulClaro;
+    color: white;
+    padding: 7px 25px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease .3s;
+
+    &:hover{
+        background-color: $azulOscuro;
+    }
+}
+
+@media (width < 1000px){
+
+    .seccion{
+        padding-inline: 30px;
+        gap: 50px;
+    }
+
+    .textoDescriptivo{
+        font-size: 17px;
+    }
+
+    .seccionFoto{
+        height: 220px;
+    }
+}
+
+@media (width < 800px){
+
+    .seccion{
+        padding-inline: 20px;
+    }
+
+    .textoDescriptivo{
+        font-size: 16px;
+    }
+}
+
+@media (width < 700px){
+
+    .seccion{
+        padding-inline: 10px;
+        flex-direction: column;
+        padding-block: 40px;
+    }
+
+    .textoDescriptivo{
+        font-size: 15px;
+    }
+
+    .seccionFoto{
+        order: 3;
+    }
+}

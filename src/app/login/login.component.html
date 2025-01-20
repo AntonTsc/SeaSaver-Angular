@@ -1,15 +1,15 @@
 <main>
-    <form>
+    <form (submit)="iniciarSesion($event, usuario, password)">
         <h2 class="loginTitulo">Acceder</h2>
         <div class="form-group">
             <label for="usuario">Nombre de usuario</label>
             <input type="text" id="usuario" autocomplete="off" #usuario>
         </div>
         <div class="form-group">
-            <label for="passwd">Contraseña</label>
+            <label for="password">Contraseña</label>
             <input type="password" id="password" autocomplete="off" #password>
         </div>
-        <p class="errorMensaje"></p>
+        <p class="errorMensaje">{{ mensaje }}</p>
         <button type="submit">Acceso</button>
     </form>
 </main>

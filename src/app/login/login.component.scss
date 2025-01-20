@@ -40,7 +40,12 @@ form{
         all: unset;
         background-color: white;
         padding: 5px;
-        border: 1px solid;
+        outline: 1px solid;
+        transition: ease .2s;
+
+        &:focus{
+            outline: 2px solid $azulClaro;
+        }
     }
 }
 
@@ -57,6 +62,11 @@ button[type="submit"]{
     &:hover{
         background-color: $azulOscuro;
     }
+}
+
+.errorMensaje{
+    color: $rojo;
+    align-self: flex-start;
 }
 
 .seccion{

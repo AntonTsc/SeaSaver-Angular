@@ -20,7 +20,6 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     AppComponent,
     NavbarComponent,
     InicioComponent,
-    NavbarComponent,
     TiendaComponent,
     CamisetasComponent,
     SudaderasComponent,

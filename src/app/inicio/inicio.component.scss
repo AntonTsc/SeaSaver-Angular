@@ -1,5 +1,12 @@
 @import "./../../colores";
 
+@mixin centrarEnColumna{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
 .banner{
     width: 100%;
     position: relative;
@@ -90,6 +97,82 @@ section{
     }
 }
 
+@mixin centrarEnColumna{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ultimosRescates{
+    @include centrarEnColumna();
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.ultimosRescatesFlex{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-inline: 20px;
+
+    &::-webkit-scrollbar {
+        height: 10px;
+      }
+      
+    &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+    &::-webkit-scrollbar-thumb {
+        background-color: $azulClaro;
+        border-radius: 20px;
+      }
+}
+
+.rescate{
+    height: 300px;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    position: relative;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: ease .4s;
+    }
+
+    &:hover{
+        & img{
+            scale: 1.3;
+        }
+
+        & .rescateInfo{
+            opacity: 1;
+        }
+    }
+}
+
+.rescateInfo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.393);
+    color: white;
+    opacity: 0;
+    user-select: none;
+    transition: ease .3s;
+}
+
 .dudas{
     display: flex;
     width: 100%;
@@ -118,6 +201,17 @@ section{
 
     .seccionFoto{
         height: 220px;
+    }
+
+    .ultimosRescatesFlex{
+        flex-direction: row;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        justify-content: unset;
+    }
+
+    .rescate{
+        min-width: 300px;
     }
 }
 

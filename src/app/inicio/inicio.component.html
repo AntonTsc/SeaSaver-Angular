@@ -7,18 +7,6 @@
     </div>
 </div>
 
-<ngb-carousel>
-    <ng-template ngbSlide *ngFor="let noticias of rescates">
-        <div class="carouselfoto">
-            <img  src="../../assets/img/{{noticias.img}}" alt="Random first slide" />
-        </div>
-        <div class="carousel-caption">
-            <h3>{{noticias.titulo}}</h3>
-            <p>{{noticias.descripsion}}</p>
-        </div>
-    </ng-template>
-</ngb-carousel>
-
 <div class="seccion">
     <div>
         <h1 class="tituloInicio">¿Qué hacemos?</h1>
@@ -26,6 +14,20 @@
         <a class="linkInicio" routerLink="/nosotros">Quienes Somos</a>
     </div>
     <img class="seccionFoto" src="./../../assets/img/fotoinicio1.jpg" alt="">
+</div>
+
+<div class="ultimosRescates">
+    <h1 class="tituloInicio">Últimos rescates</h1>
+
+    <div class="ultimosRescatesFlex">
+        <div class="rescate" *ngFor="let rescate of rescates">
+            <img src="../../assets/img/{{rescate.img}}" alt="{{rescate.titulo}}">
+            <div class="rescateInfo">
+                <h3>{{rescate.titulo}}</h3>
+                <p>{{rescate.descripsion}}</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <section>

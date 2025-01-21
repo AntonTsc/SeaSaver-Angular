@@ -21,7 +21,6 @@ import { DonarComponent } from './donar/donar.component';
     AppComponent,
     NavbarComponent,
     InicioComponent,
-    NavbarComponent,
     TiendaComponent,
     CamisetasComponent,
     SudaderasComponent,

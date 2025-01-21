@@ -13,25 +13,25 @@
    },
    {
     "id":3,
-    "nombre": "mario",
+    "nombre": "Mario",
     "sexo":"H",
     "edad":"35"
    },
    {
     "id":4,
-    "nombre": "ludwig",
+    "nombre": "Ludwig",
     "sexo":"F",
     "edad":"45"
    },
    {
     "id":5,
-    "nombre": "luigi",
+    "nombre": "Luigi",
     "sexo":"H",
     "edad":"40"
    },
    {
     "id":6,
-    "nombre": "v",
+    "nombre": "V",
     "sexo":"F",
     "edad":"50"
    }

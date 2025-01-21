@@ -8,6 +8,7 @@ import { OtrosComponent } from './otros/otros.component';
 import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { LoginComponent } from './login/login.component';
+import { DonarComponent } from './donar/donar.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
  {path: "buscar", component: BuscarRescatadosComponent},
  {path: "nosotros", component: NosotrosComponent},
  {path: "signin", component: LoginComponent}, 
+ {path: "donar", component: DonarComponent}, 
  {path: "**", pathMatch: "full", redirectTo: ""} 
 ];
 

@@ -14,6 +14,7 @@ import { BuscarRescatadosComponent } from './buscar-rescatados/buscar-rescatados
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { DonarComponent } from './donar/donar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     OtrosComponent,
     BuscarRescatadosComponent,
     NosotrosComponent,
-    LoginComponent
+    LoginComponent,
+    DonarComponent
   ],
   imports: [
     BrowserModule,

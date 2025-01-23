@@ -1,46 +1,44 @@
-[  
-   {
-      "camisetas":[
-         {
-         "id":"1",
-         "precio":1.50,
-         "nombre":"camiseta SS",
-         "img": "fotoinicio3.webp" 
-         },
-         {
-            "id":"2",
-            "precio":1.60,
-            "nombre":"camiseta SeaSsaver",
-            "img": "camiseta.webp" 
-         }
-      ],
-      "sudaderas":[
-         {
-            "id":"3",
-            "precio":2.50,
-            "nombre":"sudareras SS",
-            "img": "sudadera1.webp" 
-         },
-         {
-            "id":"4",
-            "precio":2.60,
-            "nombre":"sudareras SeaSaiver",
-            "img": "sudadera2.webp"    
-         }
-      ],
-      "otros":[
-          {
-            "id":"5",
-            "precio":3.50,
-            "nombre":"boligrafo SS",
-            "img": "boli.webp" 
-         },
-         {
-            "id":"6",
-            "precio":3.60,
-            "nombre":"gafas SS",
-            "img": "gafas.jpg" 
-         } 
-      ]     
-   }
- ]
+{
+   "camisetas":[
+      {
+      "id":"1",
+      "precio":1.50,
+      "nombre":"camiseta SS",
+      "img": "fotoinicio3.webp" 
+      },
+      {
+         "id":"2",
+         "precio":1.60,
+         "nombre":"camiseta SeaSsaver",
+         "img": "camiseta.webp" 
+      }
+   ],
+   "sudaderas":[
+      {
+         "id":"3",
+         "precio":2.50,
+         "nombre":"sudareras SS",
+         "img": "sudadera1.webp" 
+      },
+      {
+         "id":"4",
+         "precio":2.60,
+         "nombre":"sudareras SeaSaiver",
+         "img": "sudadera2.webp"    
+      }
+   ],
+   "otros":[
+      {
+         "id":"5",
+         "precio":3.50,
+         "nombre":"boligrafo SS",
+         "img": "boli.webp" 
+      },
+      {
+         "id":"6",
+         "precio":3.60,
+         "nombre":"gafas SS",
+         "img": "gafas.jpg" 
+      } 
+   ]     
+}

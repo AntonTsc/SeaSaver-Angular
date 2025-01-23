@@ -1,8 +1,5 @@
-.rescatadosGrid{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-inline: 20px;
-    margin-bottom: 50px;
-    padding-bottom:50px;
+@import "./../otros/otros.component.scss";
+
+.camisetas{
+    @include productos();
 }

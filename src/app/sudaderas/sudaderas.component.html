@@ -1,11 +1,13 @@
-<div class="rescatadosGrid">
-    <div *ngFor="let categoria of tienda" class="card" style="width: 18rem;">
-        <div *ngFor="let producto of categoria.sudaderas">
-            <img src="../../assets/img/{{producto.img}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{producto.nombre}}</h5>
-                <p class="card-text">{{producto.precio}}€</p>
-                <a href="#" class="btn btn-primary">comprar</a>
+<h1 class="apartado">Sudaderas</h1>
+
+<div class="sudaderas">
+    <div class="producto" *ngFor="let producto of sudaderas">
+        <img class="productoImagen" src="./../../assets/img/{{ producto.img }}" alt="{{ producto.nombre }}">
+        <div class="productoInfo">
+            <h2>{{ producto.nombre }}</h2>
+            <div class="productoCompra">
+                <p>{{ producto.precio | currency }}</p>
+                <button (click)="comprar(producto.nombre, producto.precio)">Comprar</button>
             </div>
         </div>
     </div>

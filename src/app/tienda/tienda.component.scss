@@ -1,8 +1,123 @@
-.rescatadosGrid{
-    display: flex;
-    flex-wrap: wrap;
+@import "./../../colores";
+
+.tituloTienda{
+    text-align: center;
+    color: $azulOscuro;
+    margin-top: 150px;
+    font-size: 50px;
+    padding-inline: 10px;
+}
+
+.productos{
     width: 100%;
-    padding-inline: 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding-top: 30px;
+    padding-inline: 10px;
     margin-bottom: 50px;
-    padding-bottom:50px;
+
+    & div a{
+        all: unset;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $azulOscuro;
+
+        & img{
+            max-width: 200px;
+            width: 100%;
+        }
+    }
+}
+
+.seccion{
+    padding-inline: 50px;
+    display: flex;
+    width: 100%;
+    padding-block: 80px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+.tituloInicio{
+    color: $azulClaro;
+    font-size: 30px;
+}
+
+.seccionFoto{
+    height: 300px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.textoDescriptivo{
+    font-size: 20px;
+}
+
+.linkInicio{
+    all: unset;
+    background-color: $azulClaro;
+    color: white;
+    padding: 7px 25px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: ease .3s;
+
+    &:hover{
+        background-color: $azulOscuro;
+    }
+}
+
+@media (width < 1000px){
+
+    .seccion{
+        padding-inline: 30px;
+        gap: 50px;
+    }
+
+    .textoDescriptivo{
+        font-size: 17px;
+    }
+
+    .seccionFoto{
+        height: 220px;
+    }
+}
+
+@media (width < 800px){
+
+    .seccion{
+        padding-inline: 20px;
+    }
+
+    .textoDescriptivo{
+        font-size: 16px;
+    }
+}
+
+@media (width < 700px){
+
+    .seccion{
+        padding-inline: 10px;
+        flex-direction: column;
+        padding-block: 40px;
+    }
+
+    .textoDescriptivo{
+        font-size: 15px;
+    }
+
+    .seccionFoto{
+        order: 3;
+    }
 }

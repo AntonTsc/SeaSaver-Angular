@@ -1,7 +1,5 @@
-.rescatadosGrid{
-    display: grid;
-    width: 100%;
-    padding-inline: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 50px;
+@import "./../otros/otros.component.scss";
+
+.sudaderas{
+    @include productos();
 }

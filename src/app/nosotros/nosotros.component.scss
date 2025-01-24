@@ -29,7 +29,7 @@
     }
 }
 
-@mixin seccion2{
+@mixin seccion2($direccion){
     width: 100%;
     padding-block: 200px;
     display: flex;
@@ -40,14 +40,38 @@
     text-align: center;
     gap: 30px;
 
+    @if($direccion == "izq"){
+        clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+        @media (width < 700px){
+            clip-path: polygon(0% 6%, 100% 0%, 100% 94%, 0% 100%);
+        }
+    }
+
+    @if($direccion == "der"){
+        clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 85%);
+        @media (width < 700px){
+            clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 94%);
+        }
+    }
+
     & h2{
         font-size: 45px;
         max-width: 500px;
+        padding-inline: 10px;
+
+        @media (width < 600px){
+            font-size: 35px;
+        }
     }
 
     & p{
         font-size: 25px;
         max-width: 700px;
+        padding-inline: 10px;
+
+        @media (width < 500px){
+            font-size: 18px;
+        }
     }
 
     & img{
@@ -56,14 +80,17 @@
         aspect-ratio: 4/3;
         object-fit: cover;
     }
+
+    @media (width < 550px){
+        padding-block: 0px;
+    }
 }
 
 
 .seccion2{
-    @include seccion2();
+    @include seccion2("izq");
     background-color: $azulOscuro;
-    color: white;
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%); 
+    color: white; 
 }
 
 .seccion3{
@@ -76,7 +103,8 @@
     margin-top: 50px;
 
     & img{
-        width: 400px;
+        max-width: 400px;
+        width: 90%;
         aspect-ratio: 4/3;
         object-fit: cover;
     }
@@ -89,13 +117,59 @@
         & h2{
             font-size: 45px;
             text-align: center;
+            @media (width < 600px){
+                font-size: 35px;
+            }
         }
 
         & p{
             font-size: 20px;
             text-align: center;
+            @media (width < 500px){
+                font-size: 18px;
+            }
         }
     }
+}
+
+.seccion4{
+    @include seccion2("der");
+    background-color: $grisClaro;
+    margin-top: 60px;
+}
+
+.socios{
+    display: flex;
+    width: 100%;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    & div{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        & img{
+            width: 150px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+
+            @media (width < 600px){
+                width: 100px;
+            }
+        }
+    }
+
+    @media (width < 600px){
+        gap: 50px;
+    }
+
 }
 
 @media (width < 1100px){
@@ -107,15 +181,24 @@
 }
 
 @media (width < 950px){
-    .seccion3{
-        
-    }
-}
-
-@media (width < 950px){
     .quienesSomos{
         flex-direction: column;
         gap: 30px;
+    }
+
+    .seccion3 img{
+        width: 300px;
+    }
+}
+
+@media (width < 800px){
+    .seccion3{
+        flex-direction: column;
+        gap: 20px;
+
+        & img{
+            order: 2;
+        }
     }
 }
 

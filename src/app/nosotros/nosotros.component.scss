@@ -1,8 +1,126 @@
-.rescatadosGrid{
+@import "./../../colores";
+
+:host{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     width: 100%;
-    padding-inline: 20px;
-    margin-bottom: 50px;
-    padding-bottom:50px;
+    flex-direction: column;
+}
+
+.titulo{
+    text-align: center;
+    color: $azulOscuro;
+    padding-top: 40px;
+    padding-inline: 10px;
+}
+
+.quienesSomos{
+    margin-top: 30px;
+    width: 90%;
+    gap: 100px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+    & img{
+        height: 300px;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+}
+
+@mixin seccion2{
+    width: 100%;
+    padding-block: 200px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+
+    & h2{
+        font-size: 45px;
+        max-width: 500px;
+    }
+
+    & p{
+        font-size: 25px;
+        max-width: 700px;
+    }
+
+    & img{
+        max-width: 400px;
+        width: 90%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+}
+
+
+.seccion2{
+    @include seccion2();
+    background-color: $azulOscuro;
+    color: white;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%); 
+}
+
+.seccion3{
+    color: black;
+    width: 90%;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    & img{
+        width: 400px;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h2{
+            font-size: 45px;
+            text-align: center;
+        }
+
+        & p{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media (width < 1100px){
+    .quienesSomos{
+        & img{
+            height: 250px;
+        }
+    }
+}
+
+@media (width < 950px){
+    .seccion3{
+        
+    }
+}
+
+@media (width < 950px){
+    .quienesSomos{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (width < 600px){
+    .quienesSomos{
+        font-size: 18px;
+    }
 }

@@ -16,15 +16,15 @@
     <img class="seccionFoto" src="./../../assets/img/fotoinicio1.jpg" alt="">
 </div>
 
-<div class="ultimosRescates">
+<div class="ultimosRescates" *ngIf="rescates.length != 0">
     <h1 class="tituloInicio">Últimos rescates</h1>
 
     <div class="ultimosRescatesFlex">
-        <div class="rescate" *ngFor="let rescate of rescates">
-            <img src="../../assets/img/{{rescate.img}}" alt="{{rescate.titulo}}">
+        <div class="rescate" *ngFor="let rescate of rescates; let i = index">
+            <img src="../../assets/img/barco{{ i + 1 }}.jpg" alt="Rescate en {{ rescate.lugar }}">
             <div class="rescateInfo">
-                <h3>{{rescate.titulo}}</h3>
-                <p>{{rescate.descripsion}}</p>
+                <h3>{{ rescate.lugar }}</h3>
+                <p>{{ rescate.descripcion }}</p>
             </div>
         </div>
     </div>

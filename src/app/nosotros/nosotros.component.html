@@ -43,3 +43,16 @@
         <p>Aimar</p>
     </div>
 </section>
+
+<h1 *ngIf="tripulantes.length != 0" class="titulo" style="margin-top: 40px;">Nuestro Equipo</h1>
+
+<div class="equipo" *ngIf="tripulantes.length != 0">
+    <div class="trabajador" *ngFor="let capitan of capitanes">
+        <img src="./../../assets/img/capitan.png">
+        <p>{{ capitan.nombre + " " + capitan.apellido }}</p>
+    </div>
+    <div class="trabajador" *ngFor="let medico of medicos">
+        <img src="./../../assets/img/medChico.png">
+        <p>{{ medico.nombre + " " + medico.apellido }}</p>
+    </div>
+</div>

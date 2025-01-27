@@ -1,5 +1,10 @@
 @import "./../../colores";
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 a{
     all: unset;
 }
@@ -13,14 +18,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 999999999999;
-
-    & img{
-        height: 100%;
-    }
 
     & div{
         height: 100%;
@@ -28,52 +29,67 @@ nav{
         gap: 15px;
         align-items: center;
     }
+}
 
-    & ul{
-        position: absolute;
-        top: 0;
-        padding-top: 80px;
-        right: -100%;
-        background-color: $azulOscuro;
-        width: 30%;
-        list-style: none;
-        height: 100dvh;
-        transition: ease .5s;
-        z-index: -1;
-        overflow: hidden;
+.logo{
+    height: 100%;
 
-        & li{
-            width: 100%;
-            padding: 10px 10px;
-            cursor: pointer;
-            transition: ease .2s;
-            position: relative;
+    & img{
+        height: 100%;
+        width: 100%;
+    }
+}
 
+.menuDesplegable{
+    position: fixed;
+    top: 0;
+    padding-top: 80px;
+    right: -100%;
+    background-color: $azulOscuro;
+    width: 30%;
+    list-style: none;
+    height: 100dvh;
+    transition: ease .5s;
+    z-index: 999999;
+    overflow: hidden;
+    color: white;
+
+    & .menuLink, .menuLinkImportante{
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+        transition: ease .2s;
+        position: relative;
+
+        &::before{
+            content: "";
+            width: 0%;
+            height: 100%;
+            background-color: #cbcbcb51;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: ease .3s;
+            z-index: -1;
+        }
+
+        &:hover{
+            
             &::before{
-                content: "";
-                width: 0%;
-                height: 100%;
-                background-color: #cbcbcb51;
-                position: absolute;
-                top: 0;
-                left: 0;
-                transition: ease .3s;
-                z-index: -1;
-            }
-
-            &:hover{
-                
-                &::before{
-                    width: 100%;
-                }
-            }
-
-            & a{
-                font-size: 25px;
                 width: 100%;
             }
         }
+
+        & a{
+            font-size: 25px;
+            width: 100%;
+        }
     }
+}
+
+.mensajeSesion{
+    width: 100%;
+    padding: 10px;
 }
 
 .linkImportante{
@@ -103,7 +119,7 @@ nav{
 }
 
 @media (width < 900px){
-    nav > ul{
+    .menuDesplegable{
         width: 50%;
     }
 }
@@ -114,17 +130,23 @@ nav{
         padding: 5px 10px;
     }
 
-    nav > img{
+    .logo{
         height: 80%;
     }
 
-    nav > ul{
+    .menuDesplegable{
         width: 100%;
         height: fit-content;
+        right: 0;
+        top: -100%;
 
-        & li > a{
+        & .menuLink > a, .menuLinkImportante > a{
             font-size: 22px;
         }
+    }
+
+    #abrirMenu{
+        top: 0;
     }
 }
 
@@ -134,9 +156,9 @@ nav{
         display: none;
     }
 
-    nav > ul{
+    .menuDesplegable{
 
-        & li > a{
+        & .menuLink > a, .menuLinkImportante > a{
             font-size: 20px;
         }
     }

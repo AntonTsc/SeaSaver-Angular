@@ -1,0 +1,14 @@
+<h1 class="apartado">Otros</h1>
+
+<div class="otros">
+    <div class="producto" *ngFor="let producto of otros">
+        <img class="productoImagen" src="./../../assets/img/{{ producto.img }}" alt="{{ producto.nombre }}">
+        <div class="productoInfo">
+            <h2>{{ producto.nombre }}</h2>
+            <div class="productoCompra">
+                <p>{{ producto.precio | currency }}</p>
+                <button (click)="comprar(producto.nombre, producto.precio)">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>

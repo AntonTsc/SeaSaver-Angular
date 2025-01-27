@@ -1,0 +1,53 @@
+<div class="opciones">
+    <button class="btnFiltros" (click)="mostrarMenuFiltros()">Filtros <i class="ri-filter-line"></i></button>
+    <div [id]="menuFiltros ? 'showFilters' : ''" class="opcionesFiltros">
+        <div>
+            <label for="edadFiltro">Ordenar por edad:</label>
+            <select #edadSelect name="edadFiltro" id="edadFiltro" (change)="ordenarEdad(edadSelect)">
+                <option value="0" selected>Aleatorio</option>
+                <option value="1">Mayor a menor</option>
+                <option value="2">Menor a mayor</option>
+            </select>
+        </div>
+        <div>
+            <label for="sexoFiltro">sexo:</label>
+            <select name="sexoFiltro" id="sexoFiltro" #sexo (change)="filtrarSexo(sexo)">
+                <option value="0" selected>Todos</option>
+                <option value="1">Hombre</option>
+                <option value="2">Mujer</option>
+            </select>
+        </div>
+        <button class="btnCerrarFiltros" (click)="quitarMenuFiltros()"><i class="ri-close-line"></i></button>
+    </div>
+    <form (submit)="buscarNombre(nombre)">
+        <label for="nombreInput"><i class="ri-search-line"></i></label>
+        <input #nombre type="text" name="nombreInput" id="nombreInput" placeholder="Busca una persona" autocomplete="off">
+    </form>
+</div>
+
+<section *ngIf="is_admin">
+    <a routerLink="crear">Añadir Rescatado <i class="ri-add-line"></i></a>
+</section>
+
+<main class="rescatadosGrid">
+    <div class="rescatado" *ngFor="let rescatado of rescatadosFiltrados; let i = index">
+        <p>{{ rescatado.getNombreCompleto() }}</p>
+        <div class="rescatadoInfo">
+            <p>{{ rescatado.edad }} años</p>
+            <div class="rescatadoNacionalidad">
+                <p>{{ rescatado.nacionalidad }}</p>
+                <img src="{{ rescatado.getBandera() }}">
+            </div>
+        </div>
+        <button *ngIf="is_admin" class="btnAjustes" (click)="menuAjustes(i, true)"><i class="ri-more-2-fill"></i></button>
+        <div *ngIf="is_admin" class="ajustes" id="{{ i }}">
+            <a routerLink="ver/{{ rescatado.id }}" class="btnVer">Ver <i class="ri-eye-line"></i></a>
+            <a routerLink="editar/{{ rescatado.id }}" class="btnEditar">Editar <i class="ri-pencil-line"></i></a>
+            <button class="btnBorrar" (click)="borrar(rescatado.id, rescatado.getNombreCompleto())">Borrar <i class="ri-delete-bin-line"></i></button>
+            <button class="btnCerrarAjustes" (click)="menuAjustes(i, false)"><i class="ri-close-line"></i></button>
+        </div>
+    </div>
+</main>
+
+<p class="noHayResc" *ngIf="rescatadosFiltrados.length == 0">No hay ningún rescatado</p>
+<router-outlet></router-outlet>

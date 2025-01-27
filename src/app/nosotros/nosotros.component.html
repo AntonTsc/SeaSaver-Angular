@@ -1,0 +1,58 @@
+<h1 class="titulo">NINGUNA VIDA IMPORTA MÁS QUE OTRA</h1>
+
+<div class="quienesSomos">
+    <p>En SeaSaver, nos dedicamos a salvar vidas en el mar. Nuestro equipo de profesionales y voluntarios trabaja incansablemente para realizar operaciones de rescate, brindar asistencia humanitaria y proteger a quienes se encuentran en situaciones de peligro en aguas abiertas.<br><br>Además, promovemos la concienciación sobre la seguridad marítima y colaboramos con comunidades locales y organismos internacionales para garantizar un impacto positivo y duradero. ¡Juntos hacemos del mar un lugar más seguro!</p>
+    <img src="./../../assets/img/nosotros.webp">
+</div>
+
+<h1 class="titulo" style="margin-bottom: 70px;">¿Qué hacemos?</h1>
+
+<div class="seccion2">
+    <h2>Operaciones de rescate marítimo</h2>
+    <p>Brindamos asistencia a embarcaciones en peligro y salvamos vidas en situaciones de emergencia</p>
+    <img src="./../../assets/img/rescate.jpg">
+</div>
+
+<div class="seccion3">
+    <img src="./../../assets/img/educacion.webp">
+    <div>
+        <h2>Educación y prevención</h2>
+        <p>Impartimos talleres y campañas de concienciación sobre seguridad en el mar</p>
+    </div>
+</div>
+
+<div class="seccion4">
+    <h2>Colaboración internacional</h2>
+    <p>Trabajamos con organizaciones globales para mejorar la respuesta a emergencias marítimas</p>
+    <img src="./../../assets/img/colab.png">
+</div>
+
+<h1 class="titulo">Quienes lo hicieron posible</h1>
+
+<section class="socios">
+    <div>
+        <img src="./../../assets/img/anton.webp" alt="Foto de anton socio">
+        <p>Anton</p>
+    </div>
+    <div>
+        <img src="./../../assets/img/ibai.jpg" alt="Foto de ibai socio">
+        <p>Ibai</p>
+    </div>
+    <div>
+        <img src="./../../assets/img/aimar.jpg" alt="Foto de aimar socio">
+        <p>Aimar</p>
+    </div>
+</section>
+
+<h1 *ngIf="tripulantes.length != 0" class="titulo" style="margin-top: 40px;">Nuestro Equipo</h1>
+
+<div class="equipo" *ngIf="tripulantes.length != 0">
+    <div class="trabajador" *ngFor="let capitan of capitanes">
+        <img src="./../../assets/img/capitan.png">
+        <p>{{ capitan.nombre + " " + capitan.apellido }}</p>
+    </div>
+    <div class="trabajador" *ngFor="let medico of medicos">
+        <img src="./../../assets/img/medChico.png">
+        <p>{{ medico.nombre + " " + medico.apellido }}</p>
+    </div>
+</div>

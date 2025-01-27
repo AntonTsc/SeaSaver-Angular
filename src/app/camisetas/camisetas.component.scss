@@ -1,0 +1,5 @@
+@import "./../otros/otros.component.scss";
+
+.camisetas{
+    @include productos();
+}

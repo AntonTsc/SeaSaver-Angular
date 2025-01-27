@@ -1,0 +1,189 @@
+@import "./../../colores";
+
+.fondo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.397);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    max-height: 500px;
+    background-color: $grisClaro;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    padding-bottom: 30px;
+
+    @media(width < 500px){
+        height: 100dvh;
+        max-height: 100dvh;
+    }
+
+    /* Para navegadores basados en Webkit (Chrome, Edge, Safari) */
+&::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent; /* Color del fondo del track */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $azulClaro; /* Color del scrollbar */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: $azulOscuro; /* Color al pasar el cursor */
+  }
+  
+  /* Estilo para navegadores compatibles con scrollbar nativo (Firefox) */
+  & * {
+    scrollbar-width: thin; /* Grosor del scrollbar: thin, auto, none */
+    scrollbar-color: $azulOscuro transparent; /* Color del scrollbar y del fondo */
+  }
+}
+
+.btnCerrar{
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 28px;
+}
+
+h2{
+    color: $azulOscuro;
+}
+
+.imgPrev{
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.fotoLabel{
+    margin-top: 10px;
+    background-color: $azulClaro;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: white;
+    transition: ease .2s;
+
+    &:hover{
+        background-color: $azulOscuro;
+    }
+}
+
+.inputText{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    gap: 5px;
+
+    & input{
+        all: unset;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 7px;
+        background-color: white;
+        outline: 1px solid;
+        transition: ease .2s;
+
+        &:focus{
+            outline: 2px solid $azulClaro;
+        }
+    }
+}
+
+input[type="number"], select{
+    all: unset;
+    background-color: white;
+    padding: 7px;
+    outline: 1px solid;
+    transition: ease .2s;
+
+    &:focus{
+        outline: 2px solid $azulClaro;
+    }
+}
+
+
+.DobleInput{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+}
+
+.nacDiv{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.estadoDiv{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+textarea{
+    all: unset;
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    outline: 1px solid;
+    padding: 5px;
+    field-sizing: content;
+    max-height: 100px;
+    scrollbar-width: none;
+
+    &:focus{
+        outline: 2px solid $azulClaro;
+    }
+}
+
+input[type="submit"]{
+    all: unset;
+    padding: 5px 20px;
+    color: white;
+    background-color: $azulClaro;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: ease .2s;
+
+    &:hover{
+        background-color: $azulOscuro;
+    }
+}

@@ -1,0 +1,44 @@
+<h2>Tu ayuda es vital para seguir salvando vidas y reivindicando la defensa de los Derechos Humanos fundamentales.</h2>
+
+<div class="donacionContainer">
+    <div class="donacionnav">
+        <p>{{ paginaActual }}</p>
+    </div>
+    <div class="elegirCantidad" *ngIf="!pagoHecho">
+        <p class="textoExplicativo">¿Cuánto te gustaría donar? Como colaborador de Salvamento Marítimo Humanitario, nos aseguramos de que tu donación vaya directamente a apoyar nuestra causa. ¡Gracias por tu generosidad!</p>
+        <div class="donacion">
+            <input (input)="soloNumeros(don)" #don class="inputDonacion" type="text">
+            <p>€</p>
+        </div>
+        <p class="error" *ngIf="mensajeError">Introduce una cantidad para donar</p>
+        <div class="botonesGrid">
+            <button (click)="don.value = '10'">10€</button>
+            <button (click)="don.value = '25'">25€</button>
+            <button (click)="don.value = '50'">50€</button>
+            <button (click)="don.value = '100'">100€</button>
+            <button (click)="don.value = '250'">250€</button>
+            <button (click)="don.value = '500'">500€</button>
+        </div>
+        <button class="botonPago" *ngIf="logeado" (click)="hacerDonacion(don)">Donar <i class="ri-arrow-right-s-line"></i></button>
+        <p *ngIf="!logeado"><a routerLink="/signin">Inicia sesión</a> para poder donar.</p>
+    </div>
+
+    <div *ngIf="pagoHecho" class="pagoCompletado">
+        <p>Muchas gracias por la donación {{ nombre }}!</p>
+        <p>Cantidad donada: {{ cantidad }}€</p>
+        <div class="loading"></div>
+    </div>
+</div>
+
+<div class="seccion">
+    <div>
+        <h1 class="tituloInicio">Nuestros productos</h1>
+        <p class="textoDescriptivo">Apoya nuestra misión adquiriendo productos de nuestra tienda solidaria. Cada compra nos ayuda a financiar operaciones de rescate, adquirir equipos y seguir salvando vidas en el mar.<br><br>
+
+            🌟 Encuentra artículos exclusivos como camisetas, tazas y accesorios, diseñados para amantes del mar y quienes apoyan nuestra causa.<br><br>
+            
+            Haz tu compra y sé parte del cambio. ¡Gracias por ayudarnos a hacer la diferencia!</p>
+        <a class="linkInicio" routerLink="/tienda">Ir a la tienda</a>
+    </div>
+    <img class="seccionFoto" src="./../../assets/img/fotoinicio3.webp" alt="">      
+</div>

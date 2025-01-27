@@ -1,0 +1,60 @@
+<div class="fondo">
+    <form (submit)="crearRescatado($event)">
+        <button (click)="cerrar()" class="btnCerrar"><i class="ri-close-line"></i></button>
+        <h2>Crear Rescatado</h2>
+        <img class="imgPrev" src="{{ foto ? foto : './../../assets/img/nofoto.png' }}">
+        <label class="fotoLabel" for="foto">Elegir Foto <i class="ri-upload-2-line"></i></label>
+        <input type="file" id="foto" name="foto" accept="image/*" #inputFoto hidden (change)="elegirFoto(inputFoto)">
+        <div class="inputText">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" autocomplete="off" placeholder="Juan" [(ngModel)]="nombre">
+        </div>
+        <div class="inputText">
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" autocomplete="off" placeholder="Sánchez" [(ngModel)]="apellido">
+        </div>
+        <div class="DobleInput">
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" id="edad" autocomplete="off" placeholder="xx" [(ngModel)]="edad">
+            </div>
+            <div>
+                <label for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo" [(ngModel)]="sexo">
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                </select>
+            </div>
+        </div>
+        <div class="DobleInput">
+            <div>
+                <label for="medico">Médico:</label>
+                <select name="medico" id="medico" [(ngModel)]="medico">
+                    <option value="" selected disabled>--Elige médico--</option>
+                    <option *ngFor="let medico of medicos" value="{{ medico.id }}">{{ medico.nombre + " " + medico.apellido }}</option>
+                </select>
+            </div>
+            <div>
+                <label for="rescate">rescate:</label>
+                <select name="rescate" id="rescate" [(ngModel)]="rescate">
+                    <option value="" selected disabled>--Elige rescate--</option>
+                    <option *ngFor="let rescate of rescates" value="{{ rescate.id }}">{{ rescate.lugar }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="nacDiv">
+            <label for="nacionalidad">Nacionalidad:</label>
+            <select name="nacionalidad" id="nacionalidad" [(ngModel)]="nacionalidad">
+                <option value="" selected disabled>--Elige nacionalidad--</option>
+                <option *ngFor="let pais of paisesArray" value="{{ pais.nombre }}">{{ pais.nombre }}</option>
+            </select>
+        </div>
+
+        <div class="estadoDiv">
+            <label for="estado">Estado:</label>
+            <textarea name="estado" id="estado" autocomplete="off" placeholder="¿Cómo se encuentra el rescatado?" [(ngModel)]="estado"></textarea>
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>

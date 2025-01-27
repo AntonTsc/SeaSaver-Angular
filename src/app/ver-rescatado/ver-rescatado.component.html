@@ -1,0 +1,35 @@
+<div class="rescatado" #panel>
+    <button class="btnVolver" (click)="volver(panel, 1, 0)"><i class="ri-arrow-left-line"></i></button>
+
+    <img class="rescatadoFoto" src="{{ rescatado.foto ? rescatado.foto : './../../../assets/img/nofoto.png' }}">
+    <p class="rescatadoNombre">{{ rescatado.getNombreCompleto() }}</p>
+    <div class="rescatadoDetalles">
+        <div class="rescatadoInfo">
+            <div>
+                <p>{{ rescatado.nacionalidad }}</p>
+                <img src="{{ rescatado.getBandera() }}">
+            </div>
+            <p>{{ rescatado.edad }} años</p>
+        </div>
+        <p>{{ rescatado.getSexo() }} <i class="{{ rescatado.getSignoSexo() }}"></i></p>
+        <p>Rescatado en: {{ rescate.lugar }}</p>
+        <p>Médico asignado: {{ medico.nombre + " " + medico.apellido }}</p>
+        <button class="btnFicha" (click)="fichaAbierta = true">Ficha Médica <i class="ri-file-line"></i></button>
+        <div class="ajustes">
+            <a (click)="editar(panel, rescatado.id)">Editar <i class="ri-pencil-line"></i></a>
+            <button (click)="borrar(panel)">Borrar <i class="ri-delete-bin-line"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="fichaTecnicaFondo" *ngIf="fichaAbierta">
+    <div class="fichaTecnicaPanel">
+        <div class="fichaNav">
+            <p class="fichaTitulo">Ficha médica escrita por {{ medico.nombre + " " + medico.apellido }}</p>    
+            <button class="btnCerrarFicha" (click)="fichaAbierta = false"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="fichaEstado">
+            <p>{{ rescatado.estado }}</p>
+        </div>
+    </div>
+</div>

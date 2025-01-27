@@ -14,9 +14,10 @@
 <ul [id]="abierto ? 'abrirMenu' : ''" class="menuDesplegable">
     <li class="menuLinkImportante"><a routerLink="/donar"><i class="ri-service-fill"></i> Donar</a></li>
     <li class="menuLinkImportante"><a routerLink="/tienda"><i class="ri-shopping-bag-fill"></i> Tienda</a></li>
-    <li class="menuLink" *ngIf="!isAdmin"><a routerLink="/buscar"><i class="ri-search-line"></i> Buscar rescatados</a></li>
+    <li class="menuLink" *ngIf="!isAdmin"><a routerLink="/rescatados"><i class="ri-search-line"></i> Buscar rescatados</a></li>
     <li class="menuLink"><a routerLink="/nosotros"><i class="ri-information-2-line"></i> Sobre nosotros</a></li>
-    <li *ngIf="isAdmin" class="menuLink"><a routerLink="/admin"><i class="ri-admin-line"></i> Gestionar rescatados</a></li>
+    <li *ngIf="isAdmin" class="menuLink"><a routerLink="/rescatados"><i class="ri-admin-line"></i> Gestionar rescatados</a></li>
+    <li *ngIf="isAdmin" class="menuLink"><a href="http://192.168.2.10" target="_blank"><i class="ri-database-2-line"></i> Panel administrativo</a></li>
     <li *ngIf="!is_logged" class="menuLink"><a routerLink="/signin"><i class="ri-user-line"></i> Iniciar sesión</a></li>
     <li *ngIf="is_logged" class="menuLink"><a (click)="logout()"><i class="ri-logout-box-line"></i> Cerrar sesión</a></li>
     <li *ngIf="is_logged" class="mensajeSesion"><p>Sesión iniciada como: {{ userName }}</p></li>

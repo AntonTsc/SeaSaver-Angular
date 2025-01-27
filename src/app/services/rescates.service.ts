@@ -14,4 +14,8 @@ export class RescatesService {
   getRescates(): Observable<any>{
     return this.http.get(this.url);
   }
+
+  getRescate(id: number): Observable<any>{
+    return this.http.get(this.url + "/" + id);
+  }
 }

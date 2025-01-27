@@ -19,4 +19,8 @@ export class TripuServService {
   getMedicos(): Observable<any>{
     return this.http.get(this.urlMed);
   }
+
+  getMedico(id: number): Observable<any>{
+    return this.http.get(this.urlMed + "/" + id);
+  }
 }

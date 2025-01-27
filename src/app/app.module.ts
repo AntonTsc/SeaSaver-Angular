@@ -16,6 +16,9 @@ import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { DonarComponent } from './donar/donar.component';
+import { VerRescatadoComponent } from './ver-rescatado/ver-rescatado.component';
+import { EditarRescatadoComponent } from './editar-rescatado/editar-rescatado.component';
+import { CrearRescatadoComponent } from './crear-rescatado/crear-rescatado.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { DonarComponent } from './donar/donar.component';
     BuscarRescatadosComponent,
     NosotrosComponent,
     LoginComponent,
-    DonarComponent
+    DonarComponent,
+    VerRescatadoComponent,
+    EditarRescatadoComponent,
+    CrearRescatadoComponent
   ],
   imports: [
     BrowserModule,
